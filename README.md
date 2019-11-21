@@ -33,8 +33,8 @@ Things you may want to cover:
 
 ### Association
 - has_many :messages
-- has_many :grops_users
-- has_many :grops, through: :grops_users
+- has_many :groups_users
+- has_many :groups, through: :groups_users
 
 ## messages テーブル
 |Column|Type|Options|
@@ -46,19 +46,19 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- belong_to :grop
+- belong_to :group
 
-## gropsテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|grop_name|string|null: false|
+|group_name|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |message_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :users, through: :grops_users
+- has_many :users, through: :groups_users
 - has_many :messages
-- has_many :grops_users
+- has_many :groups_users
 
 ## groups_usersテーブル
 |Column|Type|Options|
