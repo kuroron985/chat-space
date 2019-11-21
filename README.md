@@ -32,11 +32,11 @@ Things you may want to cover:
 |user_name|string|null: false|
 
 ### Association
-- has_many :messeges
+- has_many :messages
 - has_many :grops_users
 - has_many :grops, through: :grops_users
 
-## messeges テーブル
+## messages テーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false|
@@ -53,11 +53,11 @@ Things you may want to cover:
 |------|----|-------|
 |grop_name|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|messege_id|integer|null: false, foreign_key: true|
+|message_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :users, through: :grops_users
-- has_many :messeges
+- has_many :messages
 - has_many :grops_users
 
 ## groups_usersテーブル
