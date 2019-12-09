@@ -35,3 +35,24 @@
     }
   }
 
+  .groups {
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    padding: 20px 20px 0;
+
+    .group {
+      text-decoration: none;
+      color: #ffffff;
+      margin-bottom: 40px;
+
+      &__group-name {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+
+      &__group-latest-message {
+        font-size: 11px;
+      }
+    }
+  }
+}
