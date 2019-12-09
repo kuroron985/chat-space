@@ -1,15 +1,15 @@
-.side-bar
- .side-header
-  .side-header__box
-   %p.side-header__box__user-name
-    kuro
-   %ul.side-header__box__menu
-    %li.side-header__box__menu__new-group
-     = link_to "#", class: "side-header__box__menu__edit-user" do
-      = icon('fas', 'edit')
-    %li.side-header__box__menu__edit-user
-     = link_to "#", class: "side-header__box__menu__edit-user" do
-      = icon('fas', 'cog')
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name
+        kuro
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__new-group
+          = link_to "#", class: "side-header__box__menu__new-group" do
+            = icon('fas', 'edit')
+        %li.side-header__box__menu__edit-user
+          = link_to "#", class: "side-header__box__menu__edit-user" do
+            = icon('fas', 'cog')
 
  .groups
   .group
