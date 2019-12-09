@@ -26,3 +26,6 @@
     %form.new-message
       .input-box
         %input{:class => "input-box__text", :type => "text", :placeholder => "type a message", :name => "message[content]", :id => "message_content"}
+        %label{:class => "input-box__image", :for => "message_image"}
+          = icon('far', 'image')
+          %input{:class => "input-box__image__file", :type => "file", :name => "message[image]", :id => "message_image"}
