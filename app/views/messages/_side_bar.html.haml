@@ -11,7 +11,10 @@
           = link_to "#", class: "side-header__box__menu__edit-user" do
             = icon('fas', 'cog')
 
- .groups
-  .group
-   %p.group__group-name
-   %p.group__group-latest-message
+  .groups
+    = link_to "#", class: "group" do
+      .group
+        %p.group__group-name
+          チーム_i
+        %p.group__group-latest-message
+          test
