@@ -80,3 +80,10 @@
   height: 90px;
   padding: 20px 40px;
 
+    .new-message {
+      display: flex;
+
+      .input-box {
+          position: relative;
+          width: 100%;
+
