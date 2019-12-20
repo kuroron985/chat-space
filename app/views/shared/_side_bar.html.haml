@@ -12,3 +12,11 @@
             = icon('fas', 'cog', class: 'icon')
 
 
+  .groups
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#", class: "group" do
+          %p.group__group-name
+            = group.name
+          %p.group__group-latest-message
+            新着メッセージ
