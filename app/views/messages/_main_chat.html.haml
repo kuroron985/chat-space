@@ -13,14 +13,7 @@
         Edit
 
   .messages
-    .message
-      .message__info
-        %p.message__info__talker
-          kuro
-        %p.message__info__date
-          2019/12/04(Wed) 20:05:47
-      %p.message__text
-        test
+    = render @messages
 
   .form
     = form_for [@group, @message] do |f|
