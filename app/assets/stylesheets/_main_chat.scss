@@ -47,6 +47,7 @@
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 46px 40px;
+    overflow: auto;
 
     .message {
     padding-bottom: 40px;
