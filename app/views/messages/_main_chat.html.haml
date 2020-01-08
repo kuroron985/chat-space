@@ -2,11 +2,12 @@
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__current-group
-        チーム_i
+        = @group.name
       %ul.main-header__left-box__member-list
         Member :
         %ui.main-header__left-box__member-list__member
-          kuro
+          - @group.users.each do |user|
+            = user.name
 
     = link_to "#", class: "main-header__edit-btn" do
       .main-header__edit-btn
