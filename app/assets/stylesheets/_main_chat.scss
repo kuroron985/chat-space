@@ -28,25 +28,26 @@
       }
     }
 
-   a {
-     color: #38aef0;
+    &__edit-btn {
+      height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      line-height: 40px;
+      position: absolute;
+      right: 40px;
 
-    .main-header__edit-btn {
-        height: 40px;
-        padding: 0 20px;
-        margin-top: 30px;
-        border: solid 1px #38aef0;
-        line-height: 40px;
-        position: absolute;
-        right: 40px;
+      a {
+        color: #38aef0;
       }
-   }
+    }
   }
 
   .messages {
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 46px 40px;
+    overflow: auto;
 
     .message {
     padding-bottom: 40px;
@@ -80,7 +81,7 @@
   height: 90px;
   padding: 20px 40px;
 
-    .new-message {
+    .new_message {
       display: flex;
 
       .input-box {
