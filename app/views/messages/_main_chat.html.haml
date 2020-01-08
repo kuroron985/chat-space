@@ -9,9 +9,8 @@
           - @group.users.each do |user|
             = user.name
 
-    = link_to "#", class: "main-header__edit-btn" do
-      .main-header__edit-btn
-        Edit
+    .main-header__edit-btn
+      = link_to "Edit", edit_group_path(params[:group_id]), method: :get
 
   .messages
     = render @messages
