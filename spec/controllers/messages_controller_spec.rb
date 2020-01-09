@@ -37,5 +37,6 @@ describe MessagesController do
   end
 
   describe '#create' do
+    let(:params) { { group_id: group.id, user_id: user.id, message: attributes_for(:message) } }
   end
 end
