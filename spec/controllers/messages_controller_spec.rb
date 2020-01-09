@@ -15,6 +15,10 @@ describe MessagesController do
       it 'assigns @message' do
         expect(assigns(:message)).to be_a_new(Message)
       end
+
+      it 'assigns @group' do
+        expect(assigns(:group)).to eq group
+      end
     context 'not log in' do
       before do
         get :index, params: { group_id: group.id }
