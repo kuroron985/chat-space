@@ -46,6 +46,10 @@ describe MessagesController do
 
     context 'can save' do
       end
+
+    context 'can not save' do
+    end
+
     context 'not log in' do
     end
   end
