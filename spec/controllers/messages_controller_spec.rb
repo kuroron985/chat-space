@@ -19,6 +19,12 @@ describe MessagesController do
       it 'assigns @group' do
         expect(assigns(:group)).to eq group
       end
+
+      it 'renders index' do
+        expect(response).to render_template :index
+      end
+    end
+
     context 'not log in' do
       before do
         get :index, params: { group_id: group.id }
