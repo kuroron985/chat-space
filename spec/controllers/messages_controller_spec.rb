@@ -43,6 +43,8 @@ describe MessagesController do
       before do
         login user
       end
+
+    context 'not log in' do
     end
   end
 end
