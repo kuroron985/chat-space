@@ -35,4 +35,7 @@ describe MessagesController do
       end
     end
   end
+
+  describe '#create' do
+  end
 end
