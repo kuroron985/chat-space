@@ -1,4 +1,45 @@
 $(function () {
+  function buildHTML(message) {
+    if (message.image) {
+      var html =
+        `<div class="message" data-message-id=${message.id}>
+            <div class="message__info">
+              <p class="message__info__talker">
+                ${message.user_name}
+              </p>
+              <p class="message__info__date">
+                ${message.created_at}
+              </p>
+            </div>
+            <p class="message__text">
+              <p class="lower-message__content">
+                ${message.content}
+              </p>
+            </p>
+            <img src=${message.image} >
+          </div>`
+      return html;
+    } else {
+      var html =
+        `<div class="message" data-message-id=${message.id}>
+            <div class="message__info">
+              <p class="message__info__talker">
+                ${message.user_name}
+              </p>
+              <p class="message__info__date">
+                ${message.created_at}
+              </p>
+            </div>
+            <p class="message__text">
+              <p class="lower-message__content">
+                ${message.content}
+              </p>
+            </p>
+          </div>`
+      return html;
+    };
+  }
+
   $('#new_message').on('submit', function (e) {
     e.preventDefault()
     var formData = new FormData(this);
