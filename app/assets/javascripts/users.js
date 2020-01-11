@@ -9,6 +9,14 @@ $(function () {
     $("#user-search-result").append(html);
   }
 
+  function addNoUser() {
+    let html = `
+      <div class="chat-group-user clearfix">
+        <p class="chat-group-user__name">ユーザーが見つかりません</p>
+      </div>
+    `;
+    $("#user-search-result").append(html);
+  }
   $("#user-search-field").on("keyup", function () {
     let input = $("#user-search-field").val();
     $.ajax({
