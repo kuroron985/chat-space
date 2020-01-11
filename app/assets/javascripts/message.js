@@ -44,6 +44,7 @@ $(function () {
     e.preventDefault()
     var formData = new FormData(this);
     var url = $(this).attr('action')
+    last_message_id = $('.message:last').data("message-id");
     $.ajax({
       url: url,
       type: "POST",
@@ -63,4 +64,5 @@ $(function () {
       alert("メッセージ送信に失敗しました");
     });
   })
+    last_message_id = $('.message:last').data("message-id");
 });
