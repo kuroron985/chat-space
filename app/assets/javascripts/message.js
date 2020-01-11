@@ -73,11 +73,17 @@ $(function () {
       data: { id: last_message_id }
     })
       .done(function (messages) {
+        if (messages.length !== 0) {
         var insertHTML = '';
         $.each(messages, function (i, message) {
           insertHTML += buildHTML(message)
         });
         $('.messages').append(insertHTML);
+        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
+        $("#new_message")[0].reset();
+        $(".form__submit").prop("disabled", false);
+        }
+      })
   };
   setInterval(reloadMessages, 7000);
 });
