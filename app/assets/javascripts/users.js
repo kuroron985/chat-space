@@ -26,6 +26,17 @@ $(function () {
       dataType: "json"
     })
       .done(function (users) {
+        $("#user-search-result").empty();
+
+        if (users.length !== 0) {
+          users.forEach(function (user) {
+            addUser(user);
+          });
+        } else if (input.length == 0) {
+          return false;
+        } else {
+          addNoUser();
+        }
       })
       .fail(function () {
       });
