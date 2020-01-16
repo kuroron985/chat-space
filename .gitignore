@@ -18,3 +18,4 @@
 .history/
 .DS_Store
 public/*
+config/secrets.yml
